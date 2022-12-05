@@ -1,0 +1,18 @@
+body{
+    background-image: linear-gradient(to right, rgb(12, 86, 146), rgb(148, 13, 92)); 
+    background-image: url(../media/gatojoia.jpg);
+
+    text-align: center;
+}
+.texto{
+    color: aqua;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    right: 5%;
+    transform: translate(-50%,2%);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.gato{
+    background-image: url(../media/gatojoia.jpg);
+}

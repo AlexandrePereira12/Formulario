@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Fórmulário de Clientes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <label for="nome" class="labelInput"></label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" class="inputUser" required>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <label for="cpf" class="labelInput"></label>
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF" class="inputUser" required>
+                    <script src="./cpf.js"></script>
+                </div>
+                <p>Sexo:</p>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <input type="radio" id="outro" name="genero" value="outro" required>
+                <label for="outro">Outro</label>
+                <br><br>
+                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <br><br>
+            </fieldset>
+            <br>
+            <div class="">
+            <fieldset>
+                <legend><b>Endereço</b></legend>
+                <label for="uf">Estado:</label>
+                <select name="estado" id="uf">
+                    <option value="0">Escolha sua Região</option>
+                    <optgroup label="Norte"></optgroup>
+                    <option value="1">Acre</option>
+                    <option value="2">Amazonas</option>
+                    <option value="3">Amapá</option>
+                    <option value="4">Pará</option>
+                    <option value="5">Rodônia</option>
+                    <option value="6">Roraima</option>
+                    <option value="7">Tocantins</option>
+                    <optgroup label="Nordeste"></optgroup>
+                    <option value="8">Alagoas</option>
+                    <option value="9">Ceará</option>
+                    <option value="10">Bahia</option>
+                    <option value="11">Maranhão</option>
+                    <option value="12">Piauí</option>
+                    <option value="13">Pernanbuco</option>
+                    <option value="14">Paraíba</option>
+                    <option value="15">Rio Grande do Norte</option>
+                    <option value="16">Sergipe</option>
+                    <optgroup label="Centro-Oeste"></optgroup>
+                    <option value="17">Goiás</option>
+                    <option value="18">Mato Grosso</option>
+                    <option value="19">Mato Grosso do Sul</option>
+                    <option value="20">Distrito Federal</option>
+                    <optgroup label="Sul"></optgroup>
+                    <option value="21">Espírito Santo</option>
+                    <option value="22">Minas Gerais</option>
+                    <option value="23">Rio de Janeiro</option>
+                    <option value="24">São Paulo</option>
+                    <optgroup label="Sudeste"></optgroup>
+                    <option value="15">Paraná</option>
+                    <option value="15">Rio Grande do Sul</option>
+                    <option value="15">Santa Catarina</option>
+                </select>
+                <br><br>
+                <form method="get" action=".">
+                    <label>Cep:
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);" /></label>
+                    <br><br>
+                    <label>Rua:
+                        <input name="rua" type="text" id="rua" size="20" /></label>
+                    <br><br>
+                    <label>Bairro:
+                        <input name="bairro" type="text" id="bairro" size="20" /></label>
+                    <br><br>
+                    <label>Cidade:
+                        <input name="cidade" type="text" id="cidade" size="20" /></label>
+                    <br><br>
+                    <label>IBGE:
+                        <input name="ibge" type="text" id="ibge" size="8" /></label>
+                    <br><br>
+                    <script src="./outros.js"></script>
+                </form>
+            </fieldset>
+            </div>
+            <br>
+            <fieldset>
+                <legend><b>Contato</b></legend>
+                <div class="inputBox">
+                    <input type="number" name="telefone" id="telefone" class="inputUser" required><br>
+                    <label for="telefone" class="labelInput">Telefone fixo(com DDD)</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="number" name="celular" id="celular" class="inputUser" required>
+                    <label for="celular" class="labelInput">Celular(com DDD)</label>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend><b>Autentificação</b></legend>
+                <div class="formularioemail">
+                    <label for="email">Email:</label><br>
+                    <input type="email" onblur="validarEmail()" onfocus="redefinirMsg()" id="email">
+                    <span id="error-email"></span>
+                    <script src="./email.js"></script>
+                </div>
+                <br>
+                <div class="formularioemail">
+                    <label for="email">Confirmar email:</label>
+                    <input type="email" onblur="validarEmail()" onfocus="redefinirMsg()" id="email">
+                    <span id="error-email"></span>
+                    <script src="./email.js"></script>
+                </div>
+                <br>
+                <div>
+                    <label for="senha">Criar senha:</label>
+                    <input type="password" required minlength="5" maxlength="8" id="senha">
+                </div>
+                <br>
+                <div>
+                    <label for="senha">Confirmar senha:</label>
+                    <input type="password" required minlength="5" maxlength="8" id="senha">
+                </div>
+            </fieldset>
+            <br>
+            <div class="box2">
+                <fieldset>
+                    <legend><b>Esportes:</b></legend>
+                    <input type="checkbox"><label for="natacao">Natação</label><br>
+                    <input type="checkbox"><label for="ginastica">Ginástica</label><br>
+                    <input type="checkbox"><label for="futebol">Futebol</label><br>
+                    <input type="checkbox"><label for="corrida">Corrida</label><br>
+                    <input type="checkbox"><label for="basquete">Basquete</label><br>
+                    <input type="checkbox"><label for="judo">Judô</label> <br>
+                    <input type="checkbox"><label for="boxe">Boxe</label> <br>
+                    <input type="checkbox"><label for="tenis">Tênis</label><br>
+                    <input type="checkbox"><label for="atletismo">Atletismo</label><br>
+                </fieldset>
+            </div>
+            <br>
+            <div class="aprender">
+                <fieldset>
+                    <legend><b>O que você deseja aprender?</b></legend>
+                    <input type="checkbox"><label for="html">HTML</label><br>
+                    <input type="checkbox"><label for="css">CSS</label> <br>
+                    <input type="checkbox"><label for="javascript">JavaScript</label> <br>
+                    <input type="checkbox"><label for="php">PHP</label> <br>
+                    <input type="checkbox"><label for="sql">SQL</label> <br>
+                    <input type="checkbox"><label for="python">Python</label> <br>
+                    <input type="checkbox"><label for="delphi">Delphi</label> <br>
+                    <input type="checkbox"><label for="uml">UML</label> <br>
+                </fieldset>
+            </div>
+            <br>
+            <div>
+                <fieldset>
+                    <legend><b>Como tomou ciência do curso de informática?</b></legend>
+                    <input type="radio" name="opc" id="opc1"><label for="radio">Rádio</label><br>
+                    <input type="radio" name="opc" id="opc1"><label for="jornal">Jornal Virtual</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="email">E-mail</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="ind_alu">Indicação de aluno</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="ind_prof">Indicação de professor</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="google">Google</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="facebook">Facebook</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="redes">Outras redes sociais</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="outdoor">Outdoors</label> <br>
+                    <input type="radio" name="opc" id="opc1"><label for="outros">Outros</label> <br>
+                    <input type="text" id="outros">
+                    <script src="./outros.js"></script>
+                </fieldset>
+                <br>
+                <button type="submit" id="submit"><a href="final.html">Finalizar cadastro</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
